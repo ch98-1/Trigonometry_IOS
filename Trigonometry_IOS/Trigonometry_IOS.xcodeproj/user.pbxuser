@@ -1,0 +1,69 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* Trigonometry_IOS */ = {
+		activeExec = 0;
+		executables = (
+			CE2D48251AF03A8000B1F4C0 /* Trigonometry_IOS */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = CE2D48251AF03A8000B1F4C0 /* Trigonometry_IOS */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Trigonometry_IOS */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Trigonometry_IOS */,
+		);
+		codeSenseManager = CE2D48311AF03A9100B1F4C0 /* Code sense */;
+		executables = (
+			CE2D48251AF03A8000B1F4C0 /* Trigonometry_IOS */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 451951232;
+			PBXWorkspaceStateSaveDate = 451951232;
+		};
+		sourceControlManager = CE2D48301AF03A9100B1F4C0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	CE2D48251AF03A8000B1F4C0 /* Trigonometry_IOS */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Trigonometry_IOS;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	CE2D48301AF03A9100B1F4C0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	CE2D48311AF03A9100B1F4C0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
