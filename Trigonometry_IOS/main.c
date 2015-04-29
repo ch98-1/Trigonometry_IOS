@@ -146,14 +146,32 @@ int main(int argc, char *argv[]){
 				Quit();//quit everything
 				break;//get out
 			case SDL_MOUSEBUTTONDOWN://when clicking down
-				Clicked(e.button.x, e.button.y);//run clicked function 
-				break;//get out
-			case SDL_MOUSEMOTION://when mouse moved
-				MouseX = (double)(e.button.x) / maxside;//set x and y position of mouse from square normalised
-				MouseY = (double)(e.button.y) / maxside;
-				if (e.button.button == SDL_BUTTON_LEFT || e.button.which == SDL_TOUCH_MOUSEID){//if mouse is pressed down
+				if (e.button.which != SDL_TOUCH_MOUSEID){//if not touch event
+					MouseX = (double)(e.button.x) / maxside;//set x and y position of mouse from square normalised
+					MouseY = (double)(e.button.y) / maxside;
+					Clicked();//run clicked function 
 					Draged();//run draged function 
 				}
+				break;//get out
+			case  SDL_FINGERDOWN://when finger touched
+				MouseX = (double)(e.tfinger.x) * hs;//set x and y position of mouse from square normalised
+				MouseY = (double)(e.tfinger.y) * ws;
+				Clicked();//run clicked function 
+				Draged();//run draged function 
+				break;//get out
+			case SDL_MOUSEMOTION://when mouse moved
+				if (e.motion.which != SDL_TOUCH_MOUSEID){//if not touch event
+					MouseX = (double)(e.motion.x) / maxside;//set x and y position of mouse from square normalised
+					MouseY = (double)(e.motion.y) / maxside;
+					if (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT)){//if mouse is pressed down
+						Draged();//run draged function 
+					}
+				}
+				break;//get out
+			case SDL_FINGERMOTION://when finger moved
+					MouseX = (double)(e.tfinger.x) * hs;//set x and y position of mouse from square normalised
+					MouseY = (double)(e.tfinger.y) * ws;
+					Draged();//run draged function 
 				break;//get out
 			case SDL_WINDOWEVENT://when window was changed
 				Resize();//resize stuff
@@ -540,9 +558,7 @@ void GetDisplay(void){//get display
 
 
 
-void Clicked(long int x, long int y){//x and y positions clicked
-	MouseX = (double)(x) / maxside;//set x and y position of mouse from square normalised
-	MouseY = (double)(y) / maxside;
+void Clicked(void){//x and y positions clicked
 	lmx = MouseX;//set last mouse click position 
 	lmy = MouseY;
 	if (MouseY > ((0.2  *hs) / 3) * 2 + 0.8 * hs + YShiftAll && MouseY < ((0.2 * hs) / 3) * 2 + 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 2 + XShiftAll && MouseX < (ws / 3) * 2 + 0.1 + XShiftAll){//if within range of DEG/RAD button

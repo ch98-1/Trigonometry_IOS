@@ -38,7 +38,7 @@
 #define DELAY_SLOW 100 //dealy while in background
 
 //paths
-#define RESOURCES "" //media resources path.
+#define RESOURCES "" //media resources path. 
 #define FONTS "" //fonts path. Inside media resources path.
 #define FONT "OpenSans-Regular.ttf" //font path
 
@@ -167,7 +167,7 @@ TTF_Font* font_64;
 int EventFilter(void* userdata, SDL_Event* e);//event filter
 void Quit(void);//quit everything
 void GetDisplay(void);//get display
-void Clicked(long int x, long int y);//x and y positions clicked
+void Clicked(void);//x and y positions clicked
 void Draged(void);//draged function to call when mouse is moved while it is down
 void Resize(void);//recalculate numbers related to size and load texts
 SDL_Texture* GetTexture(const char *file);//make texture from this file
