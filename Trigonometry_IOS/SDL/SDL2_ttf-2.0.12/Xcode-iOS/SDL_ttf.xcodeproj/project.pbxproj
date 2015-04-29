@@ -339,6 +339,7 @@
 		00B7E1EE097E26C600826121 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREPROCESSOR_DEFINITIONS = FT2_BUILD_LIBRARY;
@@ -349,6 +350,7 @@
 					"\"$(SRCROOT)/..\"",
 					"\"$(SRCROOT)/../external/freetype-2.4.12/include\"",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../SDL2-2.0.3/Xcode-iOS/SDL/build/Debug-iphonesimulator\"",
@@ -363,6 +365,7 @@
 		00B7E1EF097E26C600826121 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREPROCESSOR_DEFINITIONS = FT2_BUILD_LIBRARY;
@@ -373,6 +376,7 @@
 					"\"$(SRCROOT)/..\"",
 					"\"$(SRCROOT)/../external/freetype-2.4.12/include\"",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../SDL2-2.0.3/Xcode-iOS/SDL/build/Debug-iphonesimulator\"",
