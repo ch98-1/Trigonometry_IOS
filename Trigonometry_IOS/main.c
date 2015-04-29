@@ -154,8 +154,8 @@ int main(int argc, char *argv[]){
 				}
 				break;//get out
 			case  SDL_FINGERDOWN://when finger touched
-				MouseX = (double)(e.tfinger.x) * hs;//set x and y position of mouse from square normalised
-				MouseY = (double)(e.tfinger.y) * ws;
+				MouseX = (double)(e.tfinger.x) * ws;//set x and y position of mouse from square normalised
+				MouseY = (double)(e.tfinger.y) * hs;
 				Clicked();//run clicked function 
 				Draged();//run draged function 
 				break;//get out
@@ -169,8 +169,8 @@ int main(int argc, char *argv[]){
 				}
 				break;//get out
 			case SDL_FINGERMOTION://when finger moved
-					MouseX = (double)(e.tfinger.x) * hs;//set x and y position of mouse from square normalised
-					MouseY = (double)(e.tfinger.y) * ws;
+					MouseX = (double)(e.tfinger.x) * ws;//set x and y position of mouse from square normalised
+					MouseY = (double)(e.tfinger.y) * hs;
 					Draged();//run draged function 
 				break;//get out
 			case SDL_WINDOWEVENT://when window was changed
