@@ -1440,11 +1440,11 @@ void Calculate(void){//calculate values in the triangle
 	yshift = (hs*0.75) - (Bottom->p.y * scale);//get shift to get triangle 1/4 up
 
 	tax = pointa.p.x * scale + xshift ;//set x and y position for a, b and c
-	tay = pointa.p.y * scale + yshift + 0.2;
+	tay = pointa.p.y * scale + yshift + 0.2 * hs;
 	tbx = pointb.p.x * scale + xshift;
-	tby = pointb.p.y * scale + yshift + 0.2;
+	tby = pointb.p.y * scale + yshift + 0.2 * hs;
 	tcx = pointc.p.x * scale + xshift;
-	tcy = pointc.p.y * scale + yshift + 0.2;
+	tcy = pointc.p.y * scale + yshift + 0.2 * hs;
 
 
 
