@@ -312,15 +312,15 @@ int main(int argc, char *argv[]){
 
 		DrawTriangle(tax, tay, tbx, tby, tcx, tcy);//draw triangle
 
-		DrawText(Line_a, 0, 0.8 * hs, NULL, 0);//draw values
-		DrawText(Line_b, 0, ((0.2 * hs) / 3) + 0.8 * hs, NULL, 0);
-		DrawText(Line_c, 0, ((0.2 * hs) / 3) * 2 + 0.8 * hs, NULL, 0);
-		DrawText(Angle_A, (ws / 3), 0.8 * hs, NULL, 0);
-		DrawText(Angle_B, (ws / 3), ((0.2 * hs) / 3) + 0.8 * hs, NULL, 0);
-		DrawText(Angle_C, (ws / 3), ((0.2 * hs) / 3) * 2 + 0.8 * hs, NULL, 0);
-		DrawText(Line_h, (ws / 3) * 2, 0.8 * hs, NULL, 0);
-		DrawText(Area, (ws / 3) * 2, ((0.2 * hs) / 3) * 1 + 0.8 * hs, NULL, 0);
-		DrawText(DEG_RAD, (ws / 3) * 2, ((0.2 * hs) / 3) * 2 + 0.8 * hs, NULL, 0);//draw deg/rad button
+		DrawText(Line_a, 0, 0 * hs, NULL, 0);//draw values
+		DrawText(Line_b, 0, ((0.2 * hs) / 3) + 0 * hs, NULL, 0);
+		DrawText(Line_c, 0, ((0.2 * hs) / 3) * 2 + 0 * hs, NULL, 0);
+		DrawText(Angle_A, (ws / 3), 0 * hs, NULL, 0);
+		DrawText(Angle_B, (ws / 3), ((0.2 * hs) / 3) + 0 * hs, NULL, 0);
+		DrawText(Angle_C, (ws / 3), ((0.2 * hs) / 3) * 2 + 0 * hs, NULL, 0);
+		DrawText(Line_h, (ws / 3) * 2, 0 * hs, NULL, 0);
+		DrawText(Area, (ws / 3) * 2, ((0.2 * hs) / 3) * 1 + 0 * hs, NULL, 0);
+		DrawText(DEG_RAD, (ws / 3) * 2, ((0.2 * hs) / 3) * 2 + 0 * hs, NULL, 0);//draw deg/rad button
 
 
 
@@ -532,7 +532,7 @@ void GetDisplay(void){//get display
 void Clicked(void){//x and y positions clicked
 	lmx = MouseX;//set last mouse click position 
 	lmy = MouseY;
-	if (MouseY > ((0.2  *hs) / 3) * 2 + 0.8 * hs + YShiftAll && MouseY < ((0.2 * hs) / 3) * 2 + 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 2 + XShiftAll && MouseX < (ws / 3) * 2 + 0.1 + XShiftAll){//if within range of DEG/RAD button
+	if (MouseY > ((0.2  *hs) / 3) * 2 + 0 * hs + YShiftAll && MouseY < ((0.2 * hs) / 3) * 2 + 0 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 2 + XShiftAll && MouseX < (ws / 3) * 2 + 0.1 + XShiftAll){//if within range of DEG/RAD button
 		SDL_DestroyTexture(DEG_RAD);//destroy button texture
 		if (deg){//if in degrees
 			DEG_RAD = GetTextTexture(font_24, "RAD", 0, 0, 0);//now in radians
@@ -545,7 +545,7 @@ void Clicked(void){//x and y positions clicked
 			Calculate();//recalculate values
 		}
 	}
-	else if (MouseY > 0.8 * hs + YShiftAll && MouseY < 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX > 0 && MouseX < 0.3){//if within range of value a
+	else if (MouseY > 0 * hs + YShiftAll && MouseY < 0 * hs + (1.0 / 24) + YShiftAll && MouseX > 0 && MouseX < 0.3){//if within range of value a
 		YShiftAll = TEXT_INPUT_SHIFT;//shift for text input
 		SDL_StartTextInput();//start text input events
 		Selected = &linea;//line a is selected
@@ -554,7 +554,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
-	else if (MouseY >((0.2  *hs) / 3) * 1 + 0.8 * hs + YShiftAll && MouseY < ((0.2  *hs) / 3) * 1 + 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX > 0 + XShiftAll && MouseX < 0.3 + XShiftAll){//if within range of value b
+	else if (MouseY >((0.2  *hs) / 3) * 1 + 0 * hs + YShiftAll && MouseY < ((0.2  *hs) / 3) * 1 + 0 * hs + (1.0 / 24) + YShiftAll && MouseX > 0 + XShiftAll && MouseX < 0.3 + XShiftAll){//if within range of value b
 		YShiftAll = TEXT_INPUT_SHIFT;//shift for text input
 		SDL_StartTextInput();//start text input events
 		Selected = &lineb;//line b is selected
@@ -563,7 +563,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
-	else if (MouseY >((0.2  *hs) / 3) * 2 + 0.8 * hs + YShiftAll && MouseY < ((0.2  *hs) / 3) * 2 + 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX > 0 + XShiftAll && MouseX < 0.3 + XShiftAll){//if within range of value c
+	else if (MouseY >((0.2  *hs) / 3) * 2 + 0 * hs + YShiftAll && MouseY < ((0.2  *hs) / 3) * 2 + 0 * hs + (1.0 / 24) + YShiftAll && MouseX > 0 + XShiftAll && MouseX < 0.3 + XShiftAll){//if within range of value c
 		YShiftAll = TEXT_INPUT_SHIFT;//shift for text input
 		SDL_StartTextInput();//start text input events
 		Selected = &linec;//line c is selected
@@ -572,7 +572,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
-	else if (MouseY > 0.8*  hs + YShiftAll && MouseY < 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 1 + XShiftAll && MouseX < (ws / 3) * 1 + 0.3 + XShiftAll){//if within range of value A
+	else if (MouseY > 0 *  hs + YShiftAll && MouseY < 0 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 1 + XShiftAll && MouseX < (ws / 3) * 1 + 0.3 + XShiftAll){//if within range of value A
 		YShiftAll = TEXT_INPUT_SHIFT;//shift for text input
 		SDL_StartTextInput();//start text input events
 		Selected = &anglea;//angle a is selected
@@ -581,7 +581,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
-	else if (MouseY >((0.2  *hs) / 3) * 1 + 0.8 * hs + YShiftAll && MouseY < ((0.2 * hs) / 3) * 1 + 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 1 + XShiftAll && MouseX < (ws / 3) * 1 + 0.3 + XShiftAll){//if within range of value B
+	else if (MouseY >((0.2  *hs) / 3) * 1 + 0 * hs + YShiftAll && MouseY < ((0.2 * hs) / 3) * 1 + 0 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 1 + XShiftAll && MouseX < (ws / 3) * 1 + 0.3 + XShiftAll){//if within range of value B
 		YShiftAll = TEXT_INPUT_SHIFT;//shift for text input
 		SDL_StartTextInput();//start text input events
 		Selected = &angleb;//angle b is selected
@@ -590,7 +590,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
-	else if (MouseY >((0.2  *hs) / 3) * 2 + 0.8 * hs + YShiftAll && MouseY < ((0.2 * hs) / 3) * 2 + 0.8 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 1 + XShiftAll && MouseX < (ws / 3) * 1 + 0.3 + XShiftAll){//if within range of value C
+	else if (MouseY >((0.2  *hs) / 3) * 2 + 0 * hs + YShiftAll && MouseY < ((0.2 * hs) / 3) * 2 + 0 * hs + (1.0 / 24) + YShiftAll && MouseX >(ws / 3) * 1 + XShiftAll && MouseX < (ws / 3) * 1 + 0.3 + XShiftAll){//if within range of value C
 		YShiftAll = TEXT_INPUT_SHIFT;//shift for text input
 		SDL_StartTextInput();//start text input events
 		Selected = &anglec;//angle c is selected
@@ -1439,12 +1439,12 @@ void Calculate(void){//calculate values in the triangle
 	xshift = (ws*0.5) - ((Right->p.x * scale + Left->p.x * scale)*0.5);//get shift to get triangle to center
 	yshift = (hs*0.75) - (Bottom->p.y * scale);//get shift to get triangle 1/4 up
 
-	tax = pointa.p.x * scale + xshift;//set x and y position for a, b and c
-	tay = pointa.p.y * scale + yshift;
+	tax = pointa.p.x * scale + xshift ;//set x and y position for a, b and c
+	tay = pointa.p.y * scale + yshift + 0.2;
 	tbx = pointb.p.x * scale + xshift;
-	tby = pointb.p.y * scale + yshift;
+	tby = pointb.p.y * scale + yshift + 0.2;
 	tcx = pointc.p.x * scale + xshift;
-	tcy = pointc.p.y * scale + yshift;
+	tcy = pointc.p.y * scale + yshift + 0.2;
 
 
 

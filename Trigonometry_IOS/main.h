@@ -31,7 +31,7 @@
 #define DEGREE 57.295779513
 #define DEGREESIGN 176
 #define PI 3.14159265358979323846
-#define TEXT_INPUT_SHIFT -0.5 * hs //y shift when inputting text
+#define TEXT_INPUT_SHIFT 0 //y shift when inputting text
 
 #define WINDOW_NAME "Trigonometry"
 #define DELAY 10 //default delay
