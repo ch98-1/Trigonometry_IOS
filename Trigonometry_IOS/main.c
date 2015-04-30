@@ -238,35 +238,6 @@ int main(int argc, char *argv[]){
 		SDL_RenderClear(renderer);//clear screen
 		DrawBase();//draw background image
 
-		Value *Left = &pointc, *Right = &pointc, *Top = &pointc, *Bottom = &pointc;//right, left, top and bottom point
-		scale = 1;//scale up or down
-
-		//calculate top, bottom, left and right
-		if (pointa.p.x < Left->p.x)Left = &pointa;//get left
-		if (pointb.p.x < Left->p.x)Left = &pointb;
-		if (pointa.p.x > Right->p.x)Right = &pointa;//get right
-		if (pointb.p.x > Right->p.x)Right = &pointb;
-		if (pointa.p.y < Top->p.y)Top = &pointa;//get top
-		if (pointb.p.y < Top->p.y)Top = &pointb;
-		if (pointa.p.y > Bottom->p.y)Bottom = &pointa;//get bottom
-		if (pointb.p.y > Bottom->p.y)Bottom = &pointb;
-		//calculate scale 
-		if ((hs * 0.70) / (Bottom->p.y - Top->p.y) < (ws * 0.90) / (Right->p.x - Left->p.x)){//if height scale is bigger then width
-			scale = (hs * 0.70) / (Bottom->p.y - Top->p.y);//calculate scale
-		}
-		else{//if width scale is bigger
-			scale =(ws * 0.90) / (Right->p.x - Left->p.x);//calculate scale
-		}
-		//calculate shifts
-		xshift = (ws*0.5) - ((Right->p.x * scale + Left->p.x * scale)*0.5);//get shift to get triangle to center
-		yshift = (hs*0.75) - (Bottom->p.y * scale);//get shift to get triangle 1/4 up
-
-		tax = pointa.p.x * scale + xshift;//set x and y position for a, b and c
-		tay = pointa.p.y * scale + yshift;
-		tbx = pointb.p.x * scale + xshift;
-		tby = pointb.p.y * scale + yshift;
-		tcx = pointc.p.x * scale + xshift;
-		tcy = pointc.p.y * scale + yshift;
 
 		SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);//draw red for height
 		SDL_RenderDrawLine(renderer, tcx * maxside + XShiftAll * maxside, tay * maxside + YShiftAll * maxside, tcx * maxside + XShiftAll * maxside, tcy * maxside + YShiftAll * maxside);//height line
@@ -1439,6 +1410,41 @@ void Calculate(void){//calculate values in the triangle
 		GetPoints();//get points
 	}
 	lineh.l.l = fabs(pointc.p.y - pointa.p.y);//get height
+
+
+
+
+
+
+	Value *Left = &pointc, *Right = &pointc, *Top = &pointc, *Bottom = &pointc;//right, left, top and bottom point
+	scale = 1;//scale up or down
+
+	//calculate top, bottom, left and right
+	if (pointa.p.x < Left->p.x)Left = &pointa;//get left
+	if (pointb.p.x < Left->p.x)Left = &pointb;
+	if (pointa.p.x > Right->p.x)Right = &pointa;//get right
+	if (pointb.p.x > Right->p.x)Right = &pointb;
+	if (pointa.p.y < Top->p.y)Top = &pointa;//get top
+	if (pointb.p.y < Top->p.y)Top = &pointb;
+	if (pointa.p.y > Bottom->p.y)Bottom = &pointa;//get bottom
+	if (pointb.p.y > Bottom->p.y)Bottom = &pointb;
+	//calculate scale 
+	if ((hs * 0.70) / (Bottom->p.y - Top->p.y) < (ws * 0.90) / (Right->p.x - Left->p.x)){//if height scale is bigger then width
+		scale = (hs * 0.70) / (Bottom->p.y - Top->p.y);//calculate scale
+	}
+	else{//if width scale is bigger
+		scale = (ws * 0.90) / (Right->p.x - Left->p.x);//calculate scale
+	}
+	//calculate shifts
+	xshift = (ws*0.5) - ((Right->p.x * scale + Left->p.x * scale)*0.5);//get shift to get triangle to center
+	yshift = (hs*0.75) - (Bottom->p.y * scale);//get shift to get triangle 1/4 up
+
+	tax = pointa.p.x * scale + xshift;//set x and y position for a, b and c
+	tay = pointa.p.y * scale + yshift;
+	tbx = pointb.p.x * scale + xshift;
+	tby = pointb.p.y * scale + yshift;
+	tcx = pointc.p.x * scale + xshift;
+	tcy = pointc.p.y * scale + yshift;
 
 
 
