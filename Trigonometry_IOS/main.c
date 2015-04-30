@@ -1487,7 +1487,7 @@ void Calculate(void){//calculate values in the triangle
 	sprintf(Angle_A_Text, "A: %.5f%c", pow(DEGREE, deg)*anglea.a.a, DegreeSign);//add degrees sign
 	sprintf(Angle_B_Text, "B: %.5f%c", pow(DEGREE, deg)*angleb.a.a, DegreeSign);
 	sprintf(Angle_C_Text, "C: %.5f%c", pow(DEGREE, deg)*anglec.a.a, DegreeSign);
-	sprintf(Area_Text, "Area: %.5f", lineh.l.l * linec.l.l);//area
+	sprintf(Area_Text, "Area: %.5f", (lineh.l.l * linec.l.l) / 2);//area
 
 	Line_a = GetTextTexture(font_24, Line_a_Text, 0, 0, 0);//make textures for each value
 	Line_b = GetTextTexture(font_24, Line_b_Text, 0, 0, 0);
