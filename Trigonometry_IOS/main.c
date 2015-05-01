@@ -202,7 +202,7 @@ int main(int argc, char *argv[]){
 					if (Selected != NULL){//if something is still selected
 						SDL_StopTextInput();//end text input
 						if (IsLine(Selected)){//if selected object is a line
-							Selected->l.l = fabs(atof(SelectedValue + 2));//get selected value
+							Selected->l.l = fabs(atof(SelectedValue + 3));//get selected value
 							if (anglea.a.priority < Selected->l.priority) anglea.a.priority++;//increment priority of everything before selected value
 							if (angleb.a.priority < Selected->l.priority) angleb.a.priority++;
 							if (anglec.a.priority < Selected->l.priority) anglec.a.priority++;
@@ -212,7 +212,7 @@ int main(int argc, char *argv[]){
 							Selected->l.priority = 0;//first priority
 						}
 						else{//if selected object is a angle
-							Selected->a.a = fabs(fmod(atof(SelectedValue + 2) / pow(DEGREE, deg), PI));//get selected value
+							Selected->a.a = fabs(fmod(atof(SelectedValue + 3) / pow(DEGREE, deg), PI));//get selected value
 							if (anglea.a.priority < Selected->a.priority) anglea.a.priority++;//increment priority of everything before selected value
 							if (angleb.a.priority < Selected->a.priority) angleb.a.priority++;
 							if (anglec.a.priority < Selected->a.priority) anglec.a.priority++;
@@ -550,7 +550,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_StartTextInput();//start text input events
 		Selected = &linea;//line a is selected
 		SelectedTexture = &Line_a;//set texture
-		strcpy(SelectedValue, "a: ");//reset string
+		strcpy(SelectedValue, " a: ");//reset string
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
@@ -559,7 +559,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_StartTextInput();//start text input events
 		Selected = &lineb;//line b is selected
 		SelectedTexture = &Line_b;//set texture
-		strcpy(SelectedValue, "b: ");//reset string
+		strcpy(SelectedValue, " b: ");//reset string
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
@@ -568,7 +568,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_StartTextInput();//start text input events
 		Selected = &linec;//line c is selected
 		SelectedTexture = &Line_c;//set texture
-		strcpy(SelectedValue, "c: ");//reset string
+		strcpy(SelectedValue, " c: ");//reset string
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
@@ -577,7 +577,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_StartTextInput();//start text input events
 		Selected = &anglea;//angle a is selected
 		SelectedTexture = &Angle_A;//set texture
-		strcpy(SelectedValue, "A: ");//reset string
+		strcpy(SelectedValue, " A: ");//reset string
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
@@ -586,7 +586,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_StartTextInput();//start text input events
 		Selected = &angleb;//angle b is selected
 		SelectedTexture = &Angle_B;//set texture
-		strcpy(SelectedValue, "B: ");//reset string
+		strcpy(SelectedValue, " B: ");//reset string
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
@@ -595,7 +595,7 @@ void Clicked(void){//x and y positions clicked
 		SDL_StartTextInput();//start text input events
 		Selected = &anglec;//angle c is selected
 		SelectedTexture = &Angle_C;//set texture
-		strcpy(SelectedValue, "C: ");//reset string
+		strcpy(SelectedValue, " C: ");//reset string
 		SDL_DestroyTexture(*SelectedTexture);//destroy selected texture
 		*SelectedTexture = GetTextTexture(font_24, SelectedValue, 0, 0, 0);//get initial text
 	}
@@ -884,13 +884,13 @@ void Resize(void){//recalculate numbers related to size and load texts
 			DegreeSign = ' ';//no degree sign
 		}
 
-		sprintf(Line_a_Text, "a: %.5f", linea.l.l);//format texts to display
-		sprintf(Line_b_Text, "b: %.5f", lineb.l.l);
-		sprintf(Line_c_Text, "c: %.5f", linec.l.l);
+		sprintf(Line_a_Text, " a: %.5f", linea.l.l);//format texts to display
+		sprintf(Line_b_Text, " b: %.5f", lineb.l.l);
+		sprintf(Line_c_Text, " c: %.5f", linec.l.l);
 		sprintf(Line_h_Text, "h: %.5f", lineh.l.l);
-		sprintf(Angle_A_Text, "A: %.5f%c", pow(DEGREE, deg)*anglea.a.a, DegreeSign);//add degrees sign
-		sprintf(Angle_B_Text, "B: %.5f%c", pow(DEGREE, deg)*angleb.a.a, DegreeSign);
-		sprintf(Angle_C_Text, "C: %.5f%c", pow(DEGREE, deg)*anglec.a.a, DegreeSign);
+		sprintf(Angle_A_Text, " A: %.5f%c", pow(DEGREE, deg)*anglea.a.a, DegreeSign);//add degrees sign
+		sprintf(Angle_B_Text, " B: %.5f%c", pow(DEGREE, deg)*angleb.a.a, DegreeSign);
+		sprintf(Angle_C_Text, " C: %.5f%c", pow(DEGREE, deg)*anglec.a.a, DegreeSign);
 		sprintf(Area_Text, "Area: %.5f", lineh.l.l * linec.l.l);//area
 
 		Line_a = GetTextTexture(font_24, Line_a_Text, 0, 0, 0);//make textures for each value
@@ -1480,13 +1480,13 @@ void Calculate(void){//calculate values in the triangle
 		DegreeSign = ' ';//no degree sign
 	}
 
-	sprintf(Line_a_Text, "a: %.5f", linea.l.l);//format texts to display
-	sprintf(Line_b_Text, "b: %.5f", lineb.l.l);
-	sprintf(Line_c_Text, "c: %.5f", linec.l.l);
+	sprintf(Line_a_Text, " a: %.5f", linea.l.l);//format texts to display
+	sprintf(Line_b_Text, " b: %.5f", lineb.l.l);
+	sprintf(Line_c_Text, " c: %.5f", linec.l.l);
 	sprintf(Line_h_Text, "h: %.5f", lineh.l.l);
-	sprintf(Angle_A_Text, "A: %.5f%c", pow(DEGREE, deg)*anglea.a.a, DegreeSign);//add degrees sign
-	sprintf(Angle_B_Text, "B: %.5f%c", pow(DEGREE, deg)*angleb.a.a, DegreeSign);
-	sprintf(Angle_C_Text, "C: %.5f%c", pow(DEGREE, deg)*anglec.a.a, DegreeSign);
+	sprintf(Angle_A_Text, " A: %.5f%c", pow(DEGREE, deg)*anglea.a.a, DegreeSign);//add degrees sign
+	sprintf(Angle_B_Text, " B: %.5f%c", pow(DEGREE, deg)*angleb.a.a, DegreeSign);
+	sprintf(Angle_C_Text, " C: %.5f%c", pow(DEGREE, deg)*anglec.a.a, DegreeSign);
 	sprintf(Area_Text, "Area: %.5f", (lineh.l.l * linec.l.l) / 2);//area
 
 	Line_a = GetTextTexture(font_24, Line_a_Text, 0, 0, 0);//make textures for each value
