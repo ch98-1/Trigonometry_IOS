@@ -889,7 +889,7 @@ void Resize(void){//recalculate numbers related to size and load texts
 		Angle_C = GetTextTexture(font_24, Angle_C_Text, 0, 0, 0);
 		Area = GetTextTexture(font_24, Area_Text, 0, 0, 0);
 
-
+		Calculate();//recalculate triangle
 	}
 }
 
