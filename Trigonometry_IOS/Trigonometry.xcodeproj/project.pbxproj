@@ -11,6 +11,7 @@
 		16273B131AF055C600C17248 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE43178D1AF04C8D0080F629 /* libSDL2_ttf.a */; };
 		16273B141AF055C600C17248 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4317B11AF04CD80080F629 /* libSDL2.a */; };
 		16722E0D1AF0782F0006D085 /* Asset Catalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16722E0C1AF0782F0006D085 /* Asset Catalog.xcassets */; };
+		1696A4E51AF313C900C49E48 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1696A4E41AF313C800C49E48 /* Launch Screen.xib */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		16722E0C1AF0782F0006D085 /* Asset Catalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Asset Catalog.xcassets"; sourceTree = "<group>"; };
+		1696A4E41AF313C800C49E48 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				16722E0C1AF0782F0006D085 /* Asset Catalog.xcassets */,
+				1696A4E41AF313C800C49E48 /* Launch Screen.xib */,
 				CE4317831AF04C8D0080F629 /* SDL_ttf.xcodeproj */,
 				CE43179C1AF04CC10080F629 /* SDL_image.xcodeproj */,
 				CE4317971AF04CA90080F629 /* SDL.xcodeproj */,
@@ -313,6 +316,7 @@
 				CEBC165F1AE97EC900B8251B /* LICENSE.txt in Resources */,
 				CEBC16681AE97EC900B8251B /* OpenSans-Regular.ttf in Resources */,
 				CEBC166B1AE97EC900B8251B /* pen.png in Resources */,
+				1696A4E51AF313C900C49E48 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
