@@ -117,19 +117,6 @@ int main(int argc, char *argv[]){
 
 	//load textures
 	pen = GetTexture("pen.png");//get pen texture
-	Background = NULL;//no background
-	if (argc == 2){//if there is second argument
-		SDL_Surface* surface = IMG_Load(argv[1]);//load surface
-		if (surface == NULL){//if it could not be loaded
-			printf("could not load image: %s\n", IMG_GetError());//error message
-		}
-		SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);//get texture from loaded image
-		if (texture == NULL){//if it could not be converted to texture
-			printf("could not create texture: %s\n", SDL_GetError());//error message
-		}
-		SDL_FreeSurface(surface);//free surface
-		Background = texture;//set texture
-	}
 
 	Resize();//reload display
 	Calculate();//calculate values of the triangle
@@ -929,31 +916,6 @@ void Resize(void){//recalculate numbers related to size and load texts
 
 
 void DrawBase(void){//draw basic stuff
-	if (Background != NULL){//if there is a background
-		SDL_Rect dest;
-		int w, h, access;//value to fill up
-		long format;
-		SDL_QueryTexture(Background, &format, &access, &w, &h);//get text box size
-		dest.w = (int)w * scale;//set width and height
-		dest.h = (int)h * scale;
-		dest.x = (int)(ix * maxside);//set x and y
-		dest.y = (int)(iy * maxside);
-
-		dest.x = dest.x - dest.w / 2;//set x and y centered to x and y
-		dest.y = dest.y - dest.h / 2;
-
-		dest.x += XShiftAll * maxside;//shift x and y
-		dest.y += YShiftAll * maxside;
-
-		SDL_RenderCopy(renderer, Background, NULL, &dest);//draw texture
-	}
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);//draw white
-	SDL_Rect rect;//rectangle to draw
-	rect.w = (int)(ws * maxside);//set width and height
-	rect.h = (int)(hs * 0.25 * maxside);
-	rect.x = 0;//set x and y
-	rect.y = (int)(0.75 * maxside * hs);
-	SDL_RenderFillRect(renderer, &rect);//draw rectangle to mask bottom
 }
 
 
