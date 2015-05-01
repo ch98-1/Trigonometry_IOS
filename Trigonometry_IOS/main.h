@@ -17,7 +17,7 @@
 //#define FPS //print out fps
 
 #ifdef FULLLSCREEN
-#define WINDOWFLAGS SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN | SDL_WINDOW_BORDERLESS        //fullscreen borderless window
+#define WINDOWFLAGS SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN | SDL_WINDOW_BORDERLESS | SDL_WINDOW_RESIZABLE    //fullscreen borderless resizable window
 #define WIDTH display.w //width and height of window
 #define HEIGHT display.h
 #else
