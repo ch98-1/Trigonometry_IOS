@@ -65,7 +65,7 @@ unsigned long int fps;//frames per second
 
 SDL_Texture *somethingwentwrong;//image to display if something goes wrong
 
-SDL_Texture *Background;//image to display on background
+
 
 
 
