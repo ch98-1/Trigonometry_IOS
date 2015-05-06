@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5859F26D-29B7-42E5-8DB0-F1BFB8C198D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D6F563B4B5DF87CB3C16590F954E382B5BF50360</key>
+		<string>https://github.com/ch98-1/Trigonometry_IOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Trigonometry_IOS/Trigonometry.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D6F563B4B5DF87CB3C16590F954E382B5BF50360</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ch98-1/Trigonometry_IOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D6F563B4B5DF87CB3C16590F954E382B5BF50360</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D6F563B4B5DF87CB3C16590F954E382B5BF50360</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Trigonometry_IOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

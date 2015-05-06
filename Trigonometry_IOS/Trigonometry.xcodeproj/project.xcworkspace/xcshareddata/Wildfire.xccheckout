@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6EBA0ED4-8E32-46F1-A616-6F6E9375B90C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Wildfire</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D6F563B4B5DF87CB3C16590F954E382B5BF50360</key>
+		<string>https://github.com/ch98-1/Trigonometry_IOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Trigonometry_IOS/Wildfire.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D6F563B4B5DF87CB3C16590F954E382B5BF50360</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ch98-1/Trigonometry_IOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D6F563B4B5DF87CB3C16590F954E382B5BF50360</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D6F563B4B5DF87CB3C16590F954E382B5BF50360</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Trigonometry_IOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

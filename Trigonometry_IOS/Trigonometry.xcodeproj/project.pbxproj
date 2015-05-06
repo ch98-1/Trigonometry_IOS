@@ -10,6 +10,7 @@
 		16273B121AF055C600C17248 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4317A81AF04CD80080F629 /* libSDL2_image.a */; };
 		16273B131AF055C600C17248 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE43178D1AF04C8D0080F629 /* libSDL2_ttf.a */; };
 		16273B141AF055C600C17248 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4317B11AF04CD80080F629 /* libSDL2.a */; };
+		163A592C1AF9D4F500C4D178 /* AppIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A592B1AF9D4F500C4D178 /* AppIcon120x120.png */; };
 		16722E0D1AF0782F0006D085 /* Asset Catalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16722E0C1AF0782F0006D085 /* Asset Catalog.xcassets */; };
 		1696A4E51AF313C900C49E48 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1696A4E41AF313C800C49E48 /* Launch Screen.xib */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		163A592B1AF9D4F500C4D178 /* AppIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon120x120.png; sourceTree = "<group>"; };
 		16722E0C1AF0782F0006D085 /* Asset Catalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Asset Catalog.xcassets"; sourceTree = "<group>"; };
 		1696A4E41AF313C800C49E48 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,7 +90,7 @@
 		CEBC16521AE97EC800B8251B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		CEBC165B1AE97EC900B8251B /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		CEBC165E1AE97EC900B8251B /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.png; sourceTree = "<group>"; };
-		CEBC16A71AE9800900B8251B /* Trigonometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trigonometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBC16A71AE9800900B8251B /* Wildfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wildfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEDAF5C1AD1DEE4001C82A7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CEEDAF611AD1DF8C001C82A7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FD779EDD0E26BA1200F39101 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -122,7 +124,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEBC16A71AE9800900B8251B /* Trigonometry.app */,
+				CEBC16A71AE9800900B8251B /* Wildfire.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				163A592B1AF9D4F500C4D178 /* AppIcon120x120.png */,
 				CEBC16501AE97EC800B8251B /* resources */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
@@ -222,9 +225,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* Trigonometry */ = {
+		1D6058900D05DD3D006BFB54 /* Wildfire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Trigonometry" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Wildfire" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -237,9 +240,9 @@
 				16273B1A1AF0581500C17248 /* PBXTargetDependency */,
 				16273B1C1AF0581500C17248 /* PBXTargetDependency */,
 			);
-			name = Trigonometry;
+			name = Wildfire;
 			productName = "___PROJECTNAME___";
-			productReference = CEBC16A71AE9800900B8251B /* Trigonometry.app */;
+			productReference = CEBC16A71AE9800900B8251B /* Wildfire.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -249,6 +252,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = SP9ZX2D325;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Trigonometry" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -278,7 +286,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Trigonometry */,
+				1D6058900D05DD3D006BFB54 /* Wildfire */,
 			);
 		};
 /* End PBXProject section */
@@ -317,6 +325,7 @@
 				CEBC16681AE97EC900B8251B /* OpenSans-Regular.ttf in Resources */,
 				CEBC166B1AE97EC900B8251B /* pen.png in Resources */,
 				1696A4E51AF313C900C49E48 /* Launch Screen.xib in Resources */,
+				163A592C1AF9D4F500C4D178 /* AppIcon120x120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +366,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -372,9 +382,11 @@
 					"\"$(SRCROOT)/SDL/SDL2-2.0.3/include\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)\"";
-				PRODUCT_NAME = Trigonometry;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Wildfire;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,7 +397,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -398,7 +411,7 @@
 					"\"$(SRCROOT)/SDL/SDL2-2.0.3/include\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SDL/lib\"",
@@ -408,7 +421,9 @@
 					"\"$(SRCROOT)/../../SDL/SDL2_image-2.0.0/Xcode-iOS/build/Debug-iphonesimulator\"",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = Trigonometry;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Wildfire;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Trigonometry" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Wildfire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
